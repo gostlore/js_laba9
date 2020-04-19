@@ -12,7 +12,7 @@ var url = 'https://www.shazam.com/shazam/v2/en-US/UA/web/-/tracks/artisttoptrack
 request(url, (err, response, json) => {
      if (!err && response.statusCode === 200) {
         var obj = JSON.parse(json);
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 15; i++) {
             console.log((obj['chart'][i]['share']['subject'])+" "+(obj['chart'][i]['share']['href']))
         }
     }
